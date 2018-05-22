@@ -16,7 +16,7 @@ def thoseInRange(data, lower, upper):
     for [number, mark] in data:
         if lower <= mark <= upper:
             students.append(number)
-    if len(students) = 0: students = ["none"]
+    if len(students) == 0: students = ["None"]
     return students
 
 
@@ -28,7 +28,7 @@ def showRanges(data):
         print("Between %s and %s"%(lower,upper))
         for student in candidates:
             print("  "+student)
-        lower=upper
+        lower=upper+1
 
 
 fname = open(sys.argv[1])
