@@ -15,8 +15,8 @@ def thoseInRange(data, lower, upper):
     students = []
     for [number, mark] in data:
         if lower <= mark <= upper:
-            students.append(number)
-            print("student = ",number,"\n")
+            if number not in students:
+                students.append(number)
     if len(students) == 0: students = ["None"]
     return students
 
