@@ -34,6 +34,8 @@ def showRanges(data):
             print("  "+student)
         lower=upper+1
 
+def getBoundaries():
+    return boundaries
 #def initClasify():
 #    fname = open("marks.dat")
 #    boundaries = [0,49,59,69,74,100]
