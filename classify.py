@@ -5,6 +5,7 @@ import sys
 
 
 def getData(f):
+    """Function to read results and student numbers from a given file"""
     results = []
     for line in f:
         number, mark = line.strip().split()
@@ -12,6 +13,7 @@ def getData(f):
     return results
 
 def thoseInRange(data, lower, upper):
+    """Function to determine which students have marks in the given ranges"""
     students = []
     for [number, mark] in data:
         if lower <= mark <= upper:
@@ -22,6 +24,7 @@ def thoseInRange(data, lower, upper):
 
 
 def showRanges(data):
+    """function to display the sorted result of students and ranges onto the console"""
     lower = boundaries[0]
     for upper in boundaries[1:]:
         candidates = thoseInRange(data,lower,upper)
@@ -31,6 +34,10 @@ def showRanges(data):
             print("  "+student)
         lower=upper+1
 
+#def initClasify():
+#    fname = open("marks.dat")
+#    boundaries = [0,49,59,69,74,100]
+#    data = getData(fname)
 
 fname = open(sys.argv[1])
 boundaries = list(map(int, sys.argv[2:]))
