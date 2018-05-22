@@ -1,6 +1,7 @@
 import unittest
 import classify
 
+
 class SimpleTest(unittest.TestCase):
 
     def test_boundaries_type(self):
@@ -17,6 +18,8 @@ class SimpleTest(unittest.TestCase):
 
     def test_boundaries_length(self):
         self.assertIsNot(len(classify.boundaries), 0, "No boundaries are set.")
+
+    
 
 if __name__ == '__main__':
     unittest.main()

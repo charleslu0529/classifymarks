@@ -39,11 +39,13 @@ def showRanges(data):
 #    boundaries = [0,49,59,69,74,100]
 #    data = getData(fname)
 
-fname = open(sys.argv[1])
-boundaries = list(map(int, sys.argv[2:]))
+if __name__ == '__main__':
 
-data = getData(fname)
-showRanges(data)
+    fname = open(sys.argv[1])
+    boundaries = list(map(int, sys.argv[2:]))
+
+    data = getData(fname)
+    showRanges(data)
 
 
 
